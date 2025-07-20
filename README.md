@@ -1,6 +1,6 @@
 # Assignment 3: Understanding Algorithm Efficiency and Scalability
 
-## 📘 Overview
+## Overview
 
 This assignment is designed to deepen your understanding of how algorithms perform under different conditions. You will analyze and compare the efficiency and scalability of two key algorithms:
 
@@ -11,9 +11,9 @@ Through this assignment, you will develop the skills necessary to evaluate algor
 
 ---
 
-## 📌 Part 1: Randomized Quicksort Analysis
+## Part 1: Randomized Quicksort Analysis
 
-### 🔹 1. Implementation
+###  1. Implementation
 
 - Implemented **Randomized Quicksort**, where the pivot is selected uniformly at random from the current subarray.
 - Efficient handling of edge cases:
@@ -21,7 +21,7 @@ Through this assignment, you will develop the skills necessary to evaluate algor
   - Empty arrays
   - Already sorted or reverse-sorted arrays
 
-### 🔹 2. Analysis
+###  2. Analysis
 
 - The **average-case time complexity** of Randomized Quicksort is proven to be **O(n log n)**.
 - Analysis includes:
@@ -30,23 +30,23 @@ Through this assignment, you will develop the skills necessary to evaluate algor
   - Use of **indicator random variables** to calculate expected comparisons.
   - The expected number of comparisons is approximately `1.39 * n log n`.
 
-### 🔹 3. Comparison
+###  3. Comparison
 
 Empirical comparisons between **Randomized** and **Deterministic Quicksort** (first/mid element as pivot) were conducted on the following input distributions:
 
-- ✅ Randomly generated arrays  
-- ✅ Already sorted arrays  
-- ✅ Reverse-sorted arrays  
-- ✅ Arrays with repeated elements  
+- Randomly generated arrays  
+- Already sorted arrays  
+- Reverse-sorted arrays  
+- Arrays with repeated elements  
 
-#### 💡 Observations:
+####  Observations:
 - Randomized Quicksort consistently outperforms deterministic on non-random distributions.
 - Deterministic Quicksort can degrade to **O(n²)** in worst-case (e.g., sorted input).
 - Runtime differences align well with theoretical expectations.
 
-## 📌 Part 2: Hashing with Chaining
+##  Part 2: Hashing with Chaining
 
-### 🔹 1. Implementation
+###  1. Implementation
 
 - Implemented a **Hash Table using Chaining** (lists for each bucket).
 - A **universal hash function** is used to minimize collisions:
@@ -57,7 +57,7 @@ where:
 - `p` is a large prime number
 - `table_size` is the number of buckets
 
-### 🔹 Supported Operations
+###  Supported Operations
 
 | Operation | Description |
 |-----------|-------------|
@@ -65,7 +65,7 @@ where:
 | `search(key)`        | Retrieves the value for a given key |
 | `delete(key)`        | Removes the key-value pair |
 
-### 🔹 2. Analysis
+###  2. Analysis
 
 - Under **simple uniform hashing**, expected time for all operations is **O(1 + α)**, where:
 - α = load factor = number of elements / number of slots
@@ -73,7 +73,7 @@ where:
 - High α → longer chains → slower operations
 - Low α → efficient constant-time behavior
 
-### 🔹 Collision Minimization Strategies
+###  Collision Minimization Strategies
 
 - Use a **universal hash function**
 - Keep **α < 1** via:
@@ -81,12 +81,12 @@ where:
 - Choosing prime number table sizes
 - Dynamic expansion based on threshold
 
-### 🔹 Files
+###  Files
 - `hash_table_chaining.py`
 
 ---
 
-## 🧪 How to Run
+##  How to Run
 
 ### 1. Prerequisites
 
